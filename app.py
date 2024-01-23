@@ -10,10 +10,10 @@ app = Flask(__name__)
 # Configuración de logueo
 logging.basicConfig(level=logging.INFO)
 
-SECRET_KEY = "nutritional$plan$secret$key"
+SECRET_KEY = "secretkey"
 
-client = OpenAI(api_key="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")
-assistant = client.beta.assistants.retrieve("asst_VaHw6slZhdBsXwrlDZgi7Fnn")
+client = OpenAI(api_key="api_key")
+assistant = client.beta.assistants.retrieve("ass_id")
                                             
 instruc = assistant.instructions
 
