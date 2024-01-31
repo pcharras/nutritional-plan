@@ -4,8 +4,11 @@ import logging
 import jwt
 import datetime
 import os
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+cors = CORS(app, resources={r"*": {"origins": "http://127.0.0.1:5173"}})
 
 # Configuración de logueo
 logging.basicConfig(level=logging.INFO)
