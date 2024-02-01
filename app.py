@@ -5,6 +5,12 @@ import jwt
 import datetime
 import os
 from flask_cors import CORS
+from dotenv import load_dotenv
+
+load_dotenv()
+secretkey = os.getenv('SECRETKEY')
+api_key = os.getenv('API_KEY')
+ass_id = os.getenv('ASS_ID')
 
 app = Flask(__name__)
 
@@ -13,10 +19,10 @@ cors = CORS(app, resources={r"*": {"origins": "http://127.0.0.1:5173"}})
 # Configuración de logueo
 logging.basicConfig(level=logging.INFO)
 
-SECRET_KEY = "secretkey"
+SECRET_KEY = secretkey
 
-client = OpenAI(api_key="api_key")
-assistant = client.beta.assistants.retrieve("ass_id")
+client = OpenAI(api_key=api_key)
+assistant = client.beta.assistants.retrieve(ass_id)
                                             
 instruc = assistant.instructions
 
