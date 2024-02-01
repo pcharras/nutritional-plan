@@ -14,7 +14,7 @@ ass_id = os.getenv('ASS_ID')
 
 app = Flask(__name__)
 
-cors = CORS(app, resources={r"*": {"origins": "http://127.0.0.1:5173"}})
+cors = CORS(app, resources={r"*": {"origins": ["http://127.0.0.1:5173","app-nutri-plan-ia.vercel.app"]}})
 
 # Configuración de logueo
 logging.basicConfig(level=logging.INFO)
