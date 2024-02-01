@@ -11,11 +11,11 @@ load_dotenv()
 secretkey = os.getenv('SECRETKEY')
 api_key = os.getenv('API_KEY')
 ass_id = os.getenv('ASS_ID')
-URL == os.getenv('URL')
-URL2 == os.getenv('URL2')
+url == os.getenv('URL')
+url2 == os.getenv('URL2')
 app = Flask(__name__)
 
-cors = CORS(app, resources={r"*": {"origins": [URL,URL2]}})
+cors = CORS(app, resources={r"*": {"origins": [url,url2]}})
 
 # Configuración de logueo
 logging.basicConfig(level=logging.INFO)
