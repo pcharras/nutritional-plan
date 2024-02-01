@@ -11,10 +11,11 @@ load_dotenv()
 secretkey = os.getenv('SECRETKEY')
 api_key = os.getenv('API_KEY')
 ass_id = os.getenv('ASS_ID')
-
+URL == os.getenv('URL')
+URL2 == os.getenv('URL2')
 app = Flask(__name__)
 
-cors = CORS(app, resources={r"*": {"origins": ["http://127.0.0.1:5173","https://app-nutri-plan-ia.vercel.app"]}})
+cors = CORS(app, resources={r"*": {"origins": [URL,URL2]}})
 
 # Configuración de logueo
 logging.basicConfig(level=logging.INFO)
