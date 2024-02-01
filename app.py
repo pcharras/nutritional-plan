@@ -13,9 +13,11 @@ api_key = os.getenv('API_KEY')
 ass_id = os.getenv('ASS_ID')
 url = os.getenv('URL')
 url2 = os.getenv('URL2')
+url3 = os.getenv('URL3')
+
 app = Flask(__name__)
 
-cors = CORS(app, resources={r"*": {"origins": [url,url2]}})
+cors = CORS(app, resources={r"*": {"origins": [url,url2,url3]}})
 
 # Configuración de logueo
 logging.basicConfig(level=logging.INFO)
