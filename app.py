@@ -11,9 +11,7 @@ load_dotenv()
 secretkey = os.getenv('SECRETKEY')
 api_key = os.getenv('API_KEY')
 ass_id = os.getenv('ASS_ID')
-print(secretkey)
-print(api_key)
-print(ass_id)
+
 app = Flask(__name__)
 
 cors = CORS(app, resources={r"*": {"origins": ["http://127.0.0.1:5173","https://app-nutri-plan-ia.vercel.app"]}})
