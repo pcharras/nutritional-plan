@@ -17,7 +17,7 @@ url3 = os.getenv('URL3')
 
 app = Flask(__name__)
 
-cors = CORS(app, resources={r"*": {"origins": "https://app-nutri-plan-ia.vercel.app"}})
+cors = CORS(app, resources={r"*": {"origins": "https://app-main-nutri-plan-ia.vercel.app"}})
 
 # Configuración de logueo
 logging.basicConfig(level=logging.INFO)
